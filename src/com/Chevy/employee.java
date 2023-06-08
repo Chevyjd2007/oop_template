@@ -1,5 +1,6 @@
 package com.Chevy;
 
+//Element type
 public class employee {
 
     private String name;

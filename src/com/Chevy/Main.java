@@ -6,11 +6,12 @@ public class Main {
     public static void main(String[] args) {
 
         swe Addelios = new swe();
-        Addelios.add("Jon", 23);
-        Addelios.add("Jo", 24);
-        Addelios.add("Cleo", 24);
+        Addelios.add("Time", 34, "Global", 1000);
+        Addelios.add("Jon", 23, "Training", 100);
+        Addelios.add("Jo", 24, "Intern Project", 50);
+        Addelios.add("Cleo", 24, "Intern Project", 50);
 
-        Addelios.displayAll();
+        Addelios.display();
     }
 
 

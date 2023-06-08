@@ -1,34 +1,44 @@
 package com.Chevy;
 
 import java.util.LinkedList;
+import java.util.HashMap;
 
 public class swe {
 
-    private LinkedList<employee> company;
+    private LinkedList<HashMap<employee, engProject>> company;
+
     //constructor
     public swe(){
-        company = new LinkedList<employee>();
-        company.add(new employee("Tim", 34));
+
+        company = new LinkedList<>();
+
     }
 
     //methods
-    public void add(String x, int y){
-        employee q  = new employee(x, y);
-        company.add(new employee(q.getName(), q.getAge()));
+    public void add(String name, int age, String pname, int pcost){
+        employee q  = new employee(name, age);
+        engProject p = new engProject(pname, pcost);
+
+        HashMap<employee, engProject> temp = new HashMap<>();
+        temp.put(q, p);
+        company.add(temp);
     }
 
-    public void findEmployee(){
+    public void findEmployee(String x){
 
+        for (int i = 0; i < company.size(); i++){
+
+        }
     }
 
     public void removeEmployee(){
 
     }
 
-public void displayAll(){
+public void display(){
         System.out.println("List of employees: ");
         for (int i = 0;i < company.size(); i++)
-        System.out.println(company.get(i).getName() + ", " + company.get(i).getAge());
+        System.out.println(company.get(i).get(i));
     }
 
 }
